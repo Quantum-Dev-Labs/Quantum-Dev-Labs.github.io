@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rosacea Diary — Support</title>
+  <meta name="description" content="Official support page for Rosacea Diary — track skincare, triggers, and share progress with your dermatologist." />
+  <meta property="og:title" content="Rosacea Diary — Support" />
+  <meta property="og:description" content="Get help, tips, and contact support for Rosacea Diary." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="icon.png" />
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root {
+      --orange: #fb923c;       /* primary */
+      --coral:  #FF8A74;       /* accent */
+      --text:   #0b0b0b;       /* black-ish for long-form readability */
+      --muted:  #6b7280;       /* gray for subtle text */
+      --bg:     #fffaf7;       /* very light warm background */
+      --card:   #ffffff;
+      --ring:   rgba(251,146,60,0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: saturate(180%) blur(10px);
+      background: color-mix(in hsl, white 82%, var(--orange) 18%);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.8rem 0;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-weight: 800; letter-spacing: .2px; color: var(--text);
+    }
+    .brand img { width: 32px; height: 32px; border-radius: 8px; }
+
+    .nav a.button {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: .65rem 1rem; font-weight: 600; border-radius: 999px;
+      background: var(--orange); color: white; border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 6px 18px rgba(251,146,60,.2);
+    }
+    .nav a.button:hover { filter: brightness(0.95); text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      padding: 4.5rem 0 3rem 0;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; }
+    .kicker { color: var(--coral); font-weight: 700; letter-spacing: .5px; text-transform: uppercase; font-size: .8rem; }
+    h1 { font-size: clamp(1.9rem, 1.2rem + 3vw, 3rem); line-height: 1.1; margin: .5rem 0 1rem 0; }
+    .lead { font-size: clamp(1rem, .9rem + .5vw, 1.15rem); color: var(--muted); max-width: 60ch; }
+
+    .cta-row { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.2rem; }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.8rem 1.05rem; border-radius:12px; border:1px solid rgba(0,0,0,.06); font-weight:700; }
+    .btn.primary { background: var(--orange); color: #fff; box-shadow: 0 10px 24px rgba(251,146,60,.25); }
+    .btn.secondary { background: #fff; color: var(--text); }
+    .btn:hover { text-decoration:none; filter: brightness(0.98); }
+
+    .hero .art {
+      background: linear-gradient(160deg, color-mix(in hsl, var(--orange) 18%, white), color-mix(in hsl, var(--coral) 14%, white));
+      border-radius: 24px; padding: 1.2rem; display:grid; place-items:center;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 20px 40px rgba(255,138,116,.15);
+    }
+    .hero .art img { width: 160px; height: 160px; border-radius: 32px; object-fit: cover; border: 2px solid rgba(255,255,255,.9); }
+
+    /* Sections */
+    section { padding: 3rem 0; }
+    h2 { font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem); margin: 0 0 1rem 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 8px 22px rgba(0,0,0,.04);
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+    .step {
+      border-left: 4px solid var(--orange);
+      padding-left: .75rem;
+    }
+    .muted { color: var(--muted); }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0; color: var(--muted);
+      border-top: 1px solid rgba(0,0,0,.06);
+      background: #fff;
+    }
+    .foot-grid { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; }
+
+    /* Utilities */
+    .tag { display:inline-block; background: color-mix(in hsl, var(--coral) 18%, white); color: var(--text); border:1px solid rgba(0,0,0,.06); padding:.2rem .5rem; border-radius:999px; font-size:.8rem; }
+    .notice { border: 1px dashed var(--coral); background: #fff; padding: .8rem 1rem; border-radius: 12px; }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    /* Focus states */
+    :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header aria-label="Top navigation">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="icon.png" alt="Rosacea Diary app icon placeholder" />
+        <span>Rosacea Diary</span>
+      </a>
+      <nav>
+        <a class="button" href="mailto:rosaceadiary@theqdl.com?subject=Rosacea%20Diary%20Support">Contact Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="kicker">Support</div>
+          <h1>Your daily companion for rosacea care.</h1>
+          <p class="lead">
+            Rosacea Diary helps you track skincare routines, note potential triggers, log medications, and share a concise progress report with your dermatologist. This page offers a quick overview and ways to get help.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:rosaceadiary@theqdl.com?subject=Rosacea%20Diary%20Support">Email Support</a>
+            <a class="btn secondary" href="https://apps.apple.com/us/app/rosacea-diary/id1605261439" aria-label="App Store link coming soon">View on the App Store</a>
+          </div>
+          <p class="muted" style="margin-top:.75rem">Average reply time: within 1–2 business days.</p>
+        </div>
+        <div class="art" aria-hidden="true">
+          <img src="icon.png" alt="Rosacea Diary app icon preview" />
+        </div>
+      </div>
+    </section>
+
+    <!-- What is the app -->
+    <section id="about">
+      <div class="container grid-3">
+        <div class="card">
+          <h2>What the app does</h2>
+          <p>
+            Rosacea is a chronic skin condition that can flare and remit. While there is no cure, consistent skincare and lifestyle choices help many people manage symptoms. Rosacea Diary provides a simple, private place to:
+          </p>
+          <ul>
+            <li>Record daily routines and notes</li>
+            <li>Track mood and possible triggers</li>
+            <li>Log topical or oral medications</li>
+            <li>Generate a shareable progress report</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>How to use it</h2>
+          <ol>
+            <li class="step"><strong>Add an entry:</strong> open the app and tap <em>New Entry</em> to log your day — mood, triggers, medications, and optional photo.</li>
+            <li class="step"><strong>Review trends:</strong> explore the <em>Trends</em> tab to see mood over time, frequent triggers, and medication distribution.</li>
+            <li class="step"><strong>Share a report:</strong> from <em>Trends</em>, export a 30–90 day report via the iOS share sheet for your dermatologist.</li>
+            <li class="step"><strong>Stay consistent:</strong> short, regular entries work best to understand patterns.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h2>Good to know</h2>
+          <ul>
+            <li><span class="tag">Privacy</span> Your data syncs with iCloud via Apple’s CloudKit. Only you can access it.</li>
+            <li><span class="tag">Support</span> We’re happy to help with setup, purchases, or bug reports.</li>
+            <li><span class="tag">Medical</span> If you suspect rosacea, please see a qualified dermatologist.</li>
+          </ul>
+          <div class="notice" role="note" aria-label="Support email">
+            Prefer email? <a href="mailto:rosaceadiary@theqdl.com?subject=Rosacea%20Diary%20Support">rosaceadiary@theqdl.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Do I need an account?</h3>
+            <p>No separate account is required. The app uses your iCloud to securely sync data across your Apple devices.</p>
+          </div>
+          <div class="card">
+            <h3>Is there a subscription?</h3>
+            <p>Yes. Premium features (like long-term tracking after the trial) require a subscription. You can try them first.</p>
+          </div>
+          <div class="card">
+            <h3>How do I contact support?</h3>
+            <p>Tap the <em>Contact</em> button inside the app or email <a href="mailto:rosaceadiary@theqdl.com?subject=Rosacea%20Diary%20Support">rosaceadiary@theqdl.com</a>.</p>
+          </div>
+          <div class="card">
+            <h3>How do I share a report with my dermatologist?</h3>
+            <p>Open <em>Trends</em> → choose a date range → tap <em>Share Report</em> to export a PDF via the iOS share sheet (Mail, Messages, AirDrop, etc.).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section id="links">
+      <div class="container grid-2">
+        <div class="card">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="#" aria-label="App Store link coming soon">App Store (coming soon)</a></li>
+            <!-- If you want to surface your privacy pages: replace the link(s) below -->
+            <li><a href="https://theqdl.com/static/rosacea_diary/privacy/en.html">Privacy Policy</a></li>
+            <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple EULA)</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Need help?</h2>
+          <p>Describe the issue briefly and include your iOS version and app version if possible. Screenshots help!</p>
+          <p>
+            <a class="btn primary" href="mailto:rosaceadiary@theqdl.com?subject=Rosacea%20Diary%20Support">Email Support</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot-grid">
+      <small>© <span id="year"></span> Quantum Dev Labs. All rights reserved.</small>
+      <small>Colors: <span class="tag">#fb923c</span> <span class="tag">#FF8A74</span></small>
+    </div>
+  </footer>
+
+  <script>
+    // Auto year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
